@@ -1,1 +1,0 @@
-<h1 className="logo">율린에너지</h1>
