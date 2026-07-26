@@ -1,6 +1,6 @@
 # Yuline Energy
 
-기업 홈페이지 구축 프로젝트
+기업 견적신청 홈페이지 구축 프로젝트
 
 ## Overview
 
