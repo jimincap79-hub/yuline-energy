@@ -1,0 +1,1191 @@
+
+/* ========================================
+   율린에너지 홈페이지 최종 App.css
+======================================== */
+
+:root {
+  --primary: #0d6b34;
+  --primary-dark: #18231f;
+  --primary-light: #f3f8ef;
+  --blue-light: #eef7ff;
+  --orange: #f04a22;
+  --text: #111111;
+  --text-soft: #555555;
+  --border: #e3e3e3;
+  --background-soft: #fafafa;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 130px;
+}
+
+body {
+  margin: 0;
+  font-family: "Noto Sans KR", Arial, sans-serif;
+  color: var(--text);
+  background: #ffffff;
+  word-break: keep-all;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* ========================================
+   HEADER
+======================================== */
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 115px;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  width: 100%;
+  min-height: 104px;
+  padding: 14px 7%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+
+  background: #14231e;
+  color: #ffffff;
+
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.16);
+}
+
+.headerLogo {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+}
+
+.headerLogoImage {
+  display: block;
+  width: 220px;
+  height: auto;
+}
+
+.navMenu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+  gap: 34px;
+
+  margin: 0;
+  padding: 0;
+}
+
+.navMenu a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 auto;
+  padding: 10px 0;
+
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.3;
+  white-space: nowrap;
+
+  text-decoration: none;
+
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.navMenu a:hover,
+.navMenu a:focus-visible {
+  color: #bfe3c9;
+}
+
+.navMenu .contactMenu {
+  padding: 11px 20px;
+
+  border: 1px solid #ffffff;
+  border-radius: 999px;
+
+  background: #ffffff;
+  color: #14231e;
+}
+
+.navMenu .contactMenu:hover,
+.navMenu .contactMenu:focus-visible {
+  background: #dceee2;
+  color: #14231e;
+}
+
+/* ========================================
+   메인 히어로
+======================================== */
+
+.hero {
+  min-height: 540px;
+  padding: 70px 8%;
+
+  display: flex;
+  align-items: center;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.96) 0%,
+      rgba(255, 255, 255, 0.72) 40%,
+      rgba(255, 255, 255, 0.05) 75%
+    ),
+    url("https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1600&auto=format&fit=crop");
+
+  background-size: cover;
+  background-position: center;
+}
+
+.heroText {
+  width: min(680px, 100%);
+  padding: 36px 42px;
+
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.8);
+
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.16);
+}
+
+.heroText > p:first-child {
+  margin: 0 0 12px;
+
+  color: #111111;
+  font-size: clamp(20px, 2.5vw, 32px);
+  font-weight: 900;
+  line-height: 1.35;
+}
+
+.heroText h2 {
+  margin: 8px 0 14px;
+
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+
+  color: #111111;
+  font-size: clamp(38px, 5vw, 68px);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -2px;
+}
+
+.heroText strong {
+  color: #087532;
+  font-size: clamp(76px, 11vw, 128px);
+  font-weight: 950;
+  line-height: 0.95;
+
+  text-shadow:
+    0 2px 0 rgba(255, 255, 255, 0.95),
+    0 5px 14px rgba(0, 70, 30, 0.18);
+}
+
+.heroText h3 {
+  margin: 10px 0 22px;
+
+  color: #111111;
+  font-size: clamp(31px, 4vw, 48px);
+  font-weight: 950;
+  line-height: 1.2;
+  letter-spacing: -1.5px;
+}
+
+.heroNotice {
+  margin-top: 16px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.heroNotice p {
+  width: fit-content;
+  max-width: 100%;
+  margin: 0;
+  padding: 8px 14px;
+
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.86);
+
+  color: #111111;
+  font-size: clamp(20px, 2.7vw, 32px);
+  font-weight: 900;
+  line-height: 1.35;
+  letter-spacing: -1px;
+}
+
+.heroNotice .orange,
+.orange {
+  color: var(--orange);
+}
+
+.heroNotice .orange {
+  background: rgba(255, 247, 242, 0.94);
+}
+
+/* ========================================
+   공통 섹션
+======================================== */
+
+.section {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 56px 24px;
+  text-align: center;
+}
+
+.greenText {
+  margin: 0 0 10px;
+
+  color: #159447;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.section h2 {
+  margin: 12px 0 28px;
+  font-size: 34px;
+}
+
+/* ========================================
+   지원혜택
+======================================== */
+
+.benefitSection {
+  scroll-margin-top: 130px;
+}
+
+.benefitBox {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.benefitCard {
+  min-height: 300px;
+  padding: 40px;
+
+  border-radius: 20px;
+  background: var(--primary-light);
+
+  text-align: left;
+}
+
+.blueCard {
+  background: var(--blue-light);
+}
+
+.benefitCard h3 {
+  margin-top: 0;
+
+  color: var(--primary);
+  font-size: 24px;
+}
+
+.benefitCard h4 {
+  font-size: 19px;
+  line-height: 1.5;
+}
+
+.benefitCard ul {
+  padding-left: 22px;
+}
+
+.benefitCard li {
+  margin: 12px 0;
+  line-height: 1.6;
+}
+
+/* ========================================
+   자산관리
+======================================== */
+
+.managementSection {
+  margin-top: 64px;
+
+  border-radius: 24px;
+  background: #f7faf6;
+
+  scroll-margin-top: 130px;
+}
+
+.managementGrid {
+  margin-top: 34px;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.managementCard {
+  padding: 28px 22px;
+
+  border: 1px solid #dfe9dc;
+  border-radius: 18px;
+  background: #ffffff;
+
+  text-align: left;
+}
+
+.managementCard span {
+  color: var(--primary);
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.managementCard h3 {
+  margin: 12px 0 10px;
+
+  color: var(--primary);
+  font-size: 22px;
+}
+
+.managementCard p {
+  margin: 0;
+
+  color: #444444;
+  line-height: 1.7;
+}
+
+/* ========================================
+   태양광 이미지 및 절감표
+======================================== */
+
+.cardSection {
+  margin-top: 24px;
+
+  border-radius: 22px;
+  background: var(--background-soft);
+
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.06);
+}
+
+.imageGrid {
+  margin: 50px 0;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.imageGrid img {
+  display: block;
+  width: 100%;
+  height: 260px;
+
+  object-fit: cover;
+
+  border-radius: 20px;
+
+  transition: transform 0.3s ease;
+}
+
+.imageGrid img:hover {
+  transform: scale(1.025);
+}
+
+.tableTitle {
+  color: var(--primary);
+  font-size: 24px;
+}
+
+table {
+  width: 100%;
+  margin-top: 16px;
+
+  border-collapse: collapse;
+  background: #ffffff;
+}
+
+th {
+  background: var(--primary);
+  color: #ffffff;
+}
+
+th,
+td {
+  padding: 16px;
+
+  border: 1px solid #dddddd;
+
+  font-weight: 700;
+}
+
+.note {
+  color: #888888;
+  font-size: 13px;
+}
+
+/* ========================================
+   실제 시공사례
+======================================== */
+
+.projectSection {
+  width: min(1180px, calc(100% - 40px));
+  margin: 72px auto;
+  padding: 56px 32px;
+
+  border-radius: 24px;
+  background: #fafafa;
+
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.06);
+
+  scroll-margin-top: 130px;
+}
+
+.projectHeader {
+  margin-bottom: 36px;
+  text-align: center;
+}
+
+.projectHeader h2 {
+  margin: 10px 0 12px;
+  font-size: 40px;
+}
+
+.projectHeader > p:last-child {
+  margin: 0;
+
+  color: var(--text-soft);
+  font-size: 18px;
+}
+
+.projectGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.projectCard {
+  overflow: hidden;
+
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: #ffffff;
+
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);
+}
+
+.projectImageBox {
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+
+  background: #eeeeee;
+}
+
+.projectImageBox img {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: top;
+}
+
+.projectInfo {
+  padding: 24px;
+}
+
+.projectInfo h3 {
+  margin: 0 0 10px;
+
+  color: var(--primary);
+  font-size: 24px;
+}
+
+.projectInfo p {
+  margin: 0 0 14px;
+
+  color: var(--text-soft);
+  font-size: 17px;
+}
+
+.projectCapacity {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.projectCapacity strong {
+  display: block;
+
+  color: #111111;
+  font-size: 20px;
+}
+
+/* ========================================
+   상담 CTA
+======================================== */
+
+.cta {
+  width: min(1180px, calc(100% - 40px));
+  margin: 32px auto 0;
+  padding: 24px;
+
+  border-radius: 14px;
+  background: var(--primary);
+
+  color: #ffffff;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+/* ========================================
+   무료 견적 신청
+======================================== */
+
+.formSection {
+  width: min(1120px, calc(100% - 40px));
+  margin: 64px auto 80px;
+  padding: 54px 58px;
+
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  gap: 52px;
+  align-items: center;
+
+  border: 1px solid #e1e7df;
+  border-radius: 24px;
+  background: #fbfaf6;
+
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.07);
+
+  scroll-margin-top: 120px;
+}
+
+.formImage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 110px;
+  line-height: 1;
+}
+
+.estimateForm {
+  width: 100%;
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.formHeading {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.formHeading .greenText {
+  margin: 0 0 8px;
+}
+
+.formHeading h2 {
+  margin: 0 0 10px;
+
+  color: #111111;
+  font-size: clamp(32px, 4vw, 44px);
+  font-weight: 900;
+  line-height: 1.25;
+  letter-spacing: -1px;
+}
+
+.formHeading > p:last-child {
+  margin: 0;
+
+  color: #555555;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.formRow {
+  width: 100%;
+  min-width: 0;
+
+  display: grid;
+  grid-template-columns: 145px minmax(0, 1fr);
+  gap: 18px;
+  align-items: center;
+}
+
+.formLabel {
+  color: #222222;
+  font-size: 17px;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.checkboxGroup {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px 28px;
+
+  min-height: 48px;
+  padding: 8px 0;
+}
+
+.checkboxGroup label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #222222;
+  font-size: 16px;
+  line-height: 1.4;
+  white-space: nowrap;
+
+  cursor: pointer;
+}
+
+.checkboxGroup input[type="checkbox"] {
+  width: 19px;
+  height: 19px;
+  margin: 0;
+
+  accent-color: #0d6b34;
+}
+
+.phoneGroup {
+  display: grid;
+  grid-template-columns: 110px repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.estimateForm input[type="text"],
+.estimateForm input[type="tel"],
+.estimateForm select,
+.estimateForm textarea {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+
+  padding: 14px 15px;
+
+  border: 1px solid #c6cec3;
+  border-radius: 8px;
+  background: #ffffff;
+
+  color: #222222;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.estimateForm select {
+  min-height: 50px;
+}
+
+.estimateForm textarea {
+  min-height: 145px;
+  resize: vertical;
+}
+
+.formRowTextarea {
+  align-items: start;
+}
+
+.formRowTextarea .formLabel {
+  padding-top: 14px;
+}
+
+.estimateForm input::placeholder,
+.estimateForm textarea::placeholder {
+  color: #8b8b8b;
+}
+
+.estimateForm input:focus,
+.estimateForm select:focus,
+.estimateForm textarea:focus {
+  outline: 3px solid rgba(13, 107, 52, 0.13);
+  border-color: #0d6b34;
+}
+
+.submitButton {
+  width: 100%;
+  min-height: 58px;
+  margin-top: 6px;
+  padding: 16px 24px;
+
+  border: 0;
+  border-radius: 10px;
+  background: #0d6b34;
+
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: 900;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.submitButton:hover {
+  background: #09562a;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 900px) {
+  .formSection {
+    grid-template-columns: 1fr;
+    gap: 16px;
+
+    padding: 46px 34px;
+  }
+
+  .formImage {
+    font-size: 70px;
+  }
+}
+
+@media (max-width: 650px) {
+  .formSection {
+    width: calc(100% - 28px);
+    margin: 46px auto 60px;
+    padding: 36px 18px;
+  }
+
+  .formImage {
+    font-size: 58px;
+  }
+
+  .formHeading h2 {
+    font-size: 31px;
+  }
+
+  .formHeading > p:last-child {
+    font-size: 15px;
+  }
+
+  .formRow {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .phoneGroup {
+    grid-template-columns: 90px minmax(0, 1fr);
+  }
+
+  .phoneGroup input:last-child {
+    grid-column: 2;
+  }
+
+  .formRowTextarea .formLabel {
+    padding-top: 0;
+  }
+
+  .checkboxGroup {
+    gap: 12px 20px;
+  }
+}
+/* ========================================
+   푸터
+======================================== */
+
+footer {
+  background: var(--primary-dark);
+  color: #ffffff;
+}
+
+.footerInner {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 34px 0 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 90px;
+}
+
+.footerBrand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+
+  flex-shrink: 0;
+}
+
+.footerLogo {
+  display: block;
+  width: 150px;
+  height: auto;
+
+  flex-shrink: 0;
+  background: transparent;
+
+  filter:
+    brightness(1.15)
+    contrast(1.08)
+    drop-shadow(0 3px 8px rgba(0, 0, 0, 0.22));
+}
+
+.footerBrandText {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.footerBrandText strong {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.footerBrandText span {
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.footerInfo {
+  text-align: left;
+}
+
+.footerInfo p {
+  margin: 5px 0;
+
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.footerInfo a {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.footerDivider {
+  display: inline-block;
+  margin: 0 12px;
+
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.footerBottom {
+  padding: 13px 24px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+  color: rgba(255, 255, 255, 0.48);
+  font-size: 13px;
+  text-align: center;
+}
+
+/* ========================================
+   태블릿
+======================================== */
+
+@media (max-width: 1024px) {
+  .header {
+    padding: 16px 4%;
+    gap: 24px;
+  }
+
+  .headerLogoImage {
+    width: 205px;
+  }
+
+  .navMenu {
+    gap: 12px 18px;
+  }
+
+  .navMenu a {
+    font-size: 15px;
+  }
+
+  .managementGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .imageGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .imageGrid img {
+    width: 100%;
+    max-width: 760px;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .footerInner {
+    gap: 45px;
+  }
+}
+
+/* ========================================
+   모바일
+======================================== */
+@media (max-width: 850px) {
+  html {
+    scroll-padding-top: 195px;
+  }
+
+  .header {
+    min-height: auto;
+    padding: 18px 20px;
+
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .headerLogoImage {
+    width: 210px;
+  }
+
+  .navMenu {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px 24px;
+  }
+
+  .navMenu a {
+    font-size: 15px;
+  }
+
+  .navMenu .contactMenu {
+    padding: 9px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    scroll-padding-top: 250px;
+  }
+
+  .navMenu {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .navMenu a {
+    width: 100%;
+    min-height: 42px;
+    padding: 9px 8px;
+
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    border-radius: 8px;
+  }
+
+  .navMenu .contactMenu {
+    border-color: #ffffff;
+  }
+
+  .hero {
+    min-height: 610px;
+    padding: 42px 18px;
+
+    justify-content: center;
+
+    background-position: 62% center;
+  }
+
+  .heroText {
+    width: 100%;
+    padding: 28px 20px;
+
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.86);
+  }
+
+  .heroText > p:first-child,
+  .heroText h2,
+  .heroText h3 {
+    text-align: center;
+  }
+
+  .heroText h2 {
+    justify-content: center;
+    letter-spacing: -1.5px;
+  }
+
+  .heroNotice {
+    align-items: center;
+    gap: 8px;
+  }
+
+  .heroNotice p {
+    width: 100%;
+    padding: 9px 10px;
+
+    text-align: center;
+    letter-spacing: -0.7px;
+  }
+
+  .section {
+    width: calc(100% - 32px);
+    padding: 44px 16px;
+  }
+
+  .section h2 {
+    font-size: 29px;
+  }
+
+  .benefitBox,
+  .managementGrid,
+  .projectGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .benefitCard {
+    min-height: 0;
+    padding: 28px 24px;
+  }
+
+  .projectSection {
+    width: calc(100% - 32px);
+    margin: 48px auto;
+    padding: 40px 18px;
+  }
+
+  .projectHeader h2 {
+    font-size: 32px;
+  }
+
+  .projectImageBox {
+    height: 270px;
+  }
+
+  .projectInfo {
+    padding: 20px;
+  }
+
+  .projectInfo h3 {
+    font-size: 21px;
+  }
+
+  .cta {
+    width: calc(100% - 32px);
+    margin-top: 24px;
+    padding: 20px 16px;
+
+    font-size: 21px;
+    line-height: 1.5;
+  }
+
+  table {
+    font-size: 12px;
+  }
+
+  th,
+  td {
+    padding: 10px 6px;
+  }
+
+  .consult {
+    width: calc(100% - 32px);
+    padding: 38px 20px;
+  }
+
+  .consultHeader h2,
+  .consult > h2 {
+    font-size: 29px;
+  }
+
+  .company-info {
+    padding: 22px 18px;
+  }
+
+  .company-info p {
+    grid-template-columns: 1fr;
+    gap: 3px;
+  }
+
+  .footerInner {
+    width: min(100% - 32px, 1180px);
+    padding: 28px 0 24px;
+
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .footerBrand {
+    gap: 18px;
+  }
+
+  .footerLogo {
+    width: 170px;
+  }
+
+  .footerInfo {
+    width: 100%;
+    text-align: center;
+  }
+
+  .footerInfo p {
+    font-size: 14px;
+  }
+}
+
+/* ========================================
+   작은 모바일
+======================================== */
+
+@media (max-width: 430px) {
+
+  .hero {
+    min-height: 570px;
+    padding: 30px 14px;
+  }
+
+  .heroText {
+    padding: 24px 14px;
+  }
+
+  .heroText h2 {
+    gap: 4px 8px;
+  }
+
+  .heroNotice p {
+    font-size: 20px;
+  }
+
+  .projectImageBox {
+    height: 230px;
+  }
+
+  .footerBrand {
+    flex-direction: column;
+  }
+
+  .footerLogo {
+    width: 130px;
+  }
+}
